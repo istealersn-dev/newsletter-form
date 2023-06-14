@@ -1,0 +1,14 @@
+{
+    "Image": {
+        "icon": "../public/assets/images/icon-success.svg",
+        "alt": "Success symbol"
+    },
+    "content": {
+        "h1": "Thanks for subscribing!",
+        "desc": "A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription",
+        "button": {
+            "type": "button",
+            "label": "Dismiss message"
+        }
+    }
+}

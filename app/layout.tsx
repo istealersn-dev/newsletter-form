@@ -1,3 +1,8 @@
+'use client'
+
+import StyledComponentsRegistry from "@/lib/registry"
+import { GlobalStyles } from "@/styles/global"
+
 export const metadata = {
   title: 'Newsletter Signup form',
   description: 'Creating using Nextjs 13 & styled components',
@@ -10,7 +15,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+        {children}
+        </StyledComponentsRegistry>
+        </body>
     </html>
   )
 }

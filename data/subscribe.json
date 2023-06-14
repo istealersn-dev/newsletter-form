@@ -1,0 +1,32 @@
+{
+    "image": {
+        "alt": "Illustration of signup on tablet"
+    },
+    "content": {
+        "form_content": {
+            "h1": "Stay updated!",
+            "desc": "Join 60,000+ product managers receiving monthly updates on:",
+            "list": [
+                "Product discovery and building what matters",
+                "Measuring to ensure updates are a success",
+                "And much more!"
+            ]
+        },
+        "form_elements": {
+            "label": {
+                "value": "Email address",
+                "htmlfor": "email"
+            },
+            "input": {
+                "type":"email",
+                "id": "email",
+                "name": "email",
+                "placeholder": "email@company"
+            },
+            "button": {
+                "type": "submit",
+                "label": "Subscribe to monthly newsletter"
+            }
+        }
+    }
+}

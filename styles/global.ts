@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import { theme } from "./theme";
+import { device } from "./base/breakpoints";
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -17,11 +19,13 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  font-family: ${({ theme }) => theme.fonts.anekMalayalam}, sans-serif;
+  font-family: ${theme.font.family}, sans-serif;
   font-size: 1rem;
-  color: ${({ theme }) => theme.colors.text};
-  background-color: ${({ theme }) => theme.colors.background};
   line-height: 1;
+
+  @media ${device.lg} {
+    background-color: ${theme.body};
+  }
 }
 h1,
 h2,

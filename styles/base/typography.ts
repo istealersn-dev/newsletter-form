@@ -1,21 +1,6 @@
-import { Roboto } from 'next/font/google';
-import { font } from './variables';
-
-// Font family as Roboto
-export const roboto = Roboto({
-  weight: [
-    "400",
-    "700"
-  ],
-  subsets: ['latin']
-});
 
 // font properties for various elements such as H1, paragraph, button
 export const typography = {
-    default: {
-        fontSize: font.size
-    },
-
     h1: {
         xs: {
             fontSize: '2.5rem',
@@ -31,11 +16,16 @@ export const typography = {
     desc: {
         fontSize: '1rem',
         lineHeight: '1.5rem',
-        fontWeight: '400'
+        fontWeight: '400' 
     },
     button: {
         fontSize: '1rem',
         lineHeight: '1.5rem',
+        fontWeight: '700'
+    },
+    label: {
+        fontSize: '.75rem',
+        lineHeight: '1.125rem',
         fontWeight: '700'
     }
 }

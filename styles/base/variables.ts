@@ -3,12 +3,8 @@ export const colors = {
     'dark-navy': 'hsl(234, 29%, 20%)',
     'charcoal-grey': 'rgba(25, 24, 43, 0.25)',
     grey: 'hsl(231, 7%, 60%)',
-    white: 'hsl(0, 0%, 100%)'
+    white: 'hsl(0, 0%, 100%)',
 };
-
-export const font = {
-    size: '16px'
-}
 
 export const gradientColors = {
     btnSubmit: {
@@ -19,4 +15,8 @@ export const gradientColors = {
 
 export const boxShadow = {
     button: 'rgba(255, 97, 85, 0.5)' // rgba(255, 97, 85, 0.5)
+}
+
+export const background = {
+    body: '#36384D'
 }
