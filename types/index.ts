@@ -28,4 +28,5 @@ export interface FrmContainerProps {
   Imgsrc: string;
   Imgalt: string;
   subscribeform: SubscribeFormProps;
+  children: React.ReactNode;
 }

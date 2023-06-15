@@ -5,4 +5,5 @@ export const Subscribe = styled.form`
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
+    margin: 0rem 1.5rem 0rem;
 `

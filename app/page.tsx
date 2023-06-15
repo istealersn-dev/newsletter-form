@@ -1,7 +1,5 @@
 'use client'
 
-import { useMediaQuery } from 'react-responsive'
-
 import Image from "next/image";
 
 import data from "@/data/subscribe.json"
@@ -12,20 +10,16 @@ import { FormContainer } from "@/styles/components/FormContainer";
 import { FrmContainerProps } from "@/types";
 import SubscribeForm from "@/components/Forms/Subscribe";
 import { device } from "@/styles/base/breakpoints";
+import { Heading } from "@/styles/atom/heading";
+import Flex from "@/atom/Flex";
+import { Desc } from "@/styles/atom/paragraph";
 
 export default function Home() {
 
-  const mediaQuery = window.matchMedia(`(min-width: ${device.xs})`).matches;
-
-  console.log(mediaQuery)
-
-  const srcset = mediaQuery ? mBanner : dBanner;
-  console.log(srcset)
-
-  const formElements = data.content.form_elements
+  const formElements = data.content.form_elements;
 
   const formData: FrmContainerProps = {
-    Imgsrc: "",
+    Imgsrc: mBanner,
     Imgalt: data.image.alt,
     subscribeform: {
       labelProps: {
@@ -42,8 +36,9 @@ export default function Home() {
         onClick: () => {},
         btntype: "submit",
         label: formElements.button.label
-      }
-    }
+      },
+    },
+    children: ""
   }
 
   return (
@@ -51,9 +46,13 @@ export default function Home() {
       <section>
         <FormContainer>
           <Image 
-          src={srcset} 
+          src={formData.Imgsrc} 
           alt={formData.Imgalt} 
           />
+          <Flex flex="true" flexdirection='column' gap="1.5rem" margin="0 1.5rem 0">
+            <Heading>Stay updated!</Heading>
+            <Desc>Join 60,000+ product managers receiving monthly updates on:</Desc>
+          </Flex>
           <SubscribeForm {...formData.subscribeform}/>
         </FormContainer>
       </section>

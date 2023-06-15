@@ -5,5 +5,6 @@ import { colors } from "../base/variables";
 export const FormLabel = styled.label`
     display: block;
     color: ${colors["dark-navy"]};
+    margin-bottom: 0.5rem;
     ${typography.label}
 `

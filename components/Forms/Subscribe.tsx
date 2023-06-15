@@ -2,6 +2,7 @@ import { Subscribe } from "@/styles/components/Subscribe";
 import Label from "@/atom/Forms/FormLabel";
 import Input from "@/atom/Forms/FormInput";
 import Button from "@/atom/Button";
+import { Container } from "@/styles/atom/container";
 import { SubscribeFormProps } from "@/types";
 
 const SubscribeForm = ({ labelProps, inputProps, buttonProps }: SubscribeFormProps) => {
@@ -12,10 +13,10 @@ const SubscribeForm = ({ labelProps, inputProps, buttonProps }: SubscribeFormPro
 
     return (
         <Subscribe>
-            <div>
+            <Container width="100%">
             <Label htmlfor={htmlfor} value={value} />
             <Input name={name} id={id} inputtype={inputtype} placeholder={placeholder} />
-            </div>
+            </Container>
             <Button onClick={onClick} btntype={btntype} label={label} />
         </Subscribe>
     )
