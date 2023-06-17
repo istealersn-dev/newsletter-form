@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import { theme } from "./theme";
 import { device } from "./base/breakpoints";
+import { colors } from "./base/variables";
 
 export const GlobalStyles = createGlobalStyle`
 *,
@@ -23,7 +24,9 @@ body {
   font-size: 1rem;
   line-height: 1;
 
-  @media ${device.lg} {
+  @media ${device.sm} {
+    display: grid;
+    place-content: center;
     background-color: ${theme.body};
   }
 }
@@ -68,7 +71,9 @@ html:focus-within {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  text-decoration: none;
+  color: ${colors["dark-navy"]};
+  font-weight: 700;
 }
 
 /* Make images easier to work with */

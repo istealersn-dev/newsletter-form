@@ -21,7 +21,7 @@ export const Btnprimary = styled.button `
         transform: translateY(-2px);
     }
 
-    @media ${device.lg} {
+    @media ${device.md} {
         padding: 1.125rem 1rem 0.875rem;
     }
 `

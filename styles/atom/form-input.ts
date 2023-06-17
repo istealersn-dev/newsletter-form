@@ -8,6 +8,7 @@ export const FormInput = styled.input`
     border: 0.0625rem solid ${colors["charcoal-grey"]};
     padding: 1rem 1.5rem;
     width: 100%;
+    max-width: 23.5rem;
     ${typography.desc};
     color: ${colors["dark-navy"]};
 

@@ -1,7 +1,7 @@
-import { MouseEventHandler } from "react";
+import { ChangeEventHandler, MouseEventHandler } from "react";
 
 export interface SubmitBtnProps {
-    onClick: MouseEventHandler<HTMLButtonElement>;
+    onClick?: MouseEventHandler<HTMLButtonElement>;
     btntype: "submit" | "button";
     label?: string;
 }
@@ -11,6 +11,7 @@ export interface InputProps {
     name?: string;
     id: string;
     placeholder?: string;
+    onChange?: ChangeEventHandler<HTMLInputElement>
   }
 
 export interface LabelProps {
@@ -19,14 +20,19 @@ export interface LabelProps {
   }
 
 export interface SubscribeFormProps {
-  labelProps: LabelProps;
-  inputProps: InputProps;
+  labelProps: LabelProps
+  inputProps: InputProps
   buttonProps: SubmitBtnProps
 }
 
 export interface FrmContainerProps {
-  Imgsrc: string;
-  Imgalt: string;
   subscribeform: SubscribeFormProps;
   children: React.ReactNode;
+}
+
+export interface HeroProps {
+  heading: string
+  description: string
+  livalues: string[]
+  formDetails: SubscribeFormProps
 }
