@@ -1,4 +1,5 @@
-import { ChangeEventHandler, MouseEventHandler } from "react";
+import { errInputProps } from "@/styles/atom/form-input";
+import { FocusEventHandler, MouseEventHandler } from "react";
 
 export interface SubmitBtnProps {
     onClick?: MouseEventHandler<HTMLButtonElement>;
@@ -7,16 +8,20 @@ export interface SubmitBtnProps {
 }
 
 export interface InputProps {
-    inputtype: "email";
-    name?: string;
-    id: string;
-    placeholder?: string;
-    onChange?: ChangeEventHandler<HTMLInputElement>
+    inputtype: string
+    name: string
+    id: string
+    placeholder?: string
+    autocomplete?: string
+    onBlur?: FocusEventHandler<HTMLInputElement>
+    errdisplay?: string
   }
 
 export interface LabelProps {
     htmlfor: string;
-    value: string;
+    lvalue?: string;
+    display?: string;
+    text?: string;
   }
 
 export interface SubscribeFormProps {

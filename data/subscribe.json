@@ -17,11 +17,16 @@
                 "value": "Email address",
                 "htmlfor": "email"
             },
+            "errormsg": {
+                "display": "none",
+                "text": "Valid email required"
+            },
             "input": {
                 "type":"email",
                 "id": "email",
                 "name": "email",
-                "placeholder": "email@company"
+                "placeholder": "email@company",
+                "autocomplete": "off"
             },
             "button": {
                 "type": "submit",

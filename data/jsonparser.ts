@@ -15,13 +15,16 @@ export const heroProps: HeroProps = {
     formDetails: {
         labelProps: {
             htmlfor: data.content.form_elements.label.htmlfor,
-            value: data.content.form_elements.label.value
+            lvalue: data.content.form_elements.label.value,
+            display: data.content.form_elements.errormsg.display,
+            text: data.content.form_elements.errormsg.text
           },
           inputProps: {
             inputtype: "email",
             name: formElements.input.name,
             id: formElements.input.id,
-            placeholder: formElements.input.placeholder
+            placeholder: formElements.input.placeholder,
+            autocomplete: formElements.input.autocomplete
           },
           buttonProps: {
             onClick: () => {},

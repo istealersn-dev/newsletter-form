@@ -2,15 +2,22 @@
 
 import { Hero } from "@/components/Hero";
 import { heroProps } from "@/data/jsonparser";
-import ThankYou from "./(thankyou)/page";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const router = useRouter()
+
+  const goBack = () => {
+    router.push('/')
+    console.log('Success')
+  }
 
   return (
     <main>
       <section>
-          {/* <Hero {...heroProps} /> */}
-          <ThankYou />
+          <Hero {...heroProps} />
+          {/* <ThankYou /> */}
       </section>
     </main>
   )

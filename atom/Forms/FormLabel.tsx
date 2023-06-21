@@ -1,9 +1,12 @@
 import { LabelProps } from "@/types";
-import { FormLabel } from '@/styles/atom/form-label'
+import { ErroMsg, FormLabel, LabelContainer } from '@/styles/atom/form-label'
 
-const Label = ({htmlfor, value}: LabelProps) => {
+const Label = ({htmlfor, lvalue, display, text}: LabelProps) => {
     return (
-        <FormLabel htmlFor={htmlfor}>{value}</FormLabel>
+        <LabelContainer>
+            <FormLabel htmlFor={htmlfor}>{lvalue}</FormLabel>
+            <ErroMsg display={display}>{text}</ErroMsg>
+        </LabelContainer>
     )
 }
 
