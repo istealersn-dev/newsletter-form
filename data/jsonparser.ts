@@ -30,5 +30,8 @@ export const heroProps: HeroProps = {
             onClick: () => {},
             btntype: "submit",
             label: formElements.button.label
-          }}
+          },
+          setIsSubmitted: () => {}
+        },
+        setIsSubmitted: () => {}
     }
