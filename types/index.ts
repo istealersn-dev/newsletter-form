@@ -28,6 +28,7 @@ export interface SubscribeFormProps {
   labelProps: LabelProps
   inputProps: InputProps
   buttonProps: SubmitBtnProps
+  setIsSubmitted: (value: boolean) => void
 }
 
 export interface FrmContainerProps {
@@ -40,4 +41,5 @@ export interface HeroProps {
   description: string
   livalues: string[]
   formDetails: SubscribeFormProps
+  setIsSubmitted: (value: boolean) => void
 }

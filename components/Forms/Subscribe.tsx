@@ -11,7 +11,7 @@ const FContainer = styled.div`
     width: 100%;
 `
 
-const SubscribeForm = ({ labelProps, inputProps, buttonProps }: SubscribeFormProps) => {
+const SubscribeForm = ({ labelProps, inputProps, buttonProps, setIsSubmitted }: SubscribeFormProps) => {
 
     const { htmlfor, lvalue, display, text } = labelProps;
     const { inputtype, name, id, placeholder, autocomplete } = inputProps;
@@ -21,35 +21,40 @@ const SubscribeForm = ({ labelProps, inputProps, buttonProps }: SubscribeFormPro
     const [disValue, setdisValue] = useState('') // Controls the display of error message
     const emailRegx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/; // Email validation
 
-    
-    let errLabel = inputValue === '' ? display : disValue;
-
     const handleBlur = (e: React.FocusEvent<HTMLInputElement>) => {
         const inputValue = e.target.value
-        setInputValue(inputValue);
-        setdisValue(emailRegx.test(inputValue) ? 'none' : 'block');
+        if (emailRegx.test(inputValue)) {
+            setInputValue(inputValue);
+            setdisValue('none')
+        } else {
+            setdisValue('block');
+            setInputValue('');
+        }
     }
 
     function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault()
-        console.log(inputValue,'\n',errLabel)
-        if (inputValue === '') {
-            errLabel = "block"
 
-            console.log(inputValue,'\n',errLabel)
+        if (emailRegx.test(inputValue)) {
+            setIsSubmitted(true)
+            setInputValue('')
+        } else {
+            setdisValue('block')
         }
-
-        console.log(`This seem to work - ${inputValue}`)
-        setInputValue('')
     }
 
-    return (
+    let errLabel = inputValue === '' && disValue === 'block' ? disValue : display;
+    console.log('Input value:', inputValue);
+    console.log('DisValue:', disValue);
+    console.log('ErrLabel:', errLabel);
+
+    return ( 
         <Subscribe onSubmit={handleSubmit}>
             <FContainer>
                 <Label 
                     htmlfor={htmlfor} 
                     lvalue={lvalue} 
-                    display={errLabel}
+                    display={errLabel === 'none' ? 'none' : 'block'}
                     text={text} />
                 <Input 
                     name={name} 

@@ -16,7 +16,8 @@ export const Hero = ({
     heading,
     description,
     livalues,
-    formDetails
+    formDetails,
+    setIsSubmitted
     }: HeroProps) => {
     return (
         <Flex>
@@ -31,7 +32,7 @@ export const Hero = ({
                         ))}
                     </Ulist>
                 </FormContent>
-                <SubscribeForm {...formDetails}/>
+                <SubscribeForm {...formDetails} setIsSubmitted={setIsSubmitted}/>
             </Contentarea>
         </Flex>
     )
