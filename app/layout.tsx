@@ -1,5 +1,7 @@
+'use client'
+
 import StyledComponentsRegistry from "@/lib/registry"
-import { GlobalStyles } from "@/styles/global"
+import '../styles/global.css'
 
 export const metadata = {
   title: 'Newsletter Signup form',
@@ -13,12 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <StyledComponentsRegistry>
-          <GlobalStyles />
-        {children}
-        </StyledComponentsRegistry>
-        </body>
+        <body>
+            <StyledComponentsRegistry>
+              {children}
+            </StyledComponentsRegistry>
+          </body>
     </html>
   )
 }

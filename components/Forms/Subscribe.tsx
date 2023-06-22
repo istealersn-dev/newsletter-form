@@ -44,9 +44,6 @@ const SubscribeForm = ({ labelProps, inputProps, buttonProps, setIsSubmitted }: 
     }
 
     let errLabel = inputValue === '' && disValue === 'block' ? disValue : display;
-    console.log('Input value:', inputValue);
-    console.log('DisValue:', disValue);
-    console.log('ErrLabel:', errLabel);
 
     return ( 
         <Subscribe onSubmit={handleSubmit}>

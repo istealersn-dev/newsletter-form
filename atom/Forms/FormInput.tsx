@@ -1,7 +1,7 @@
 import { InputProps } from "@/types";
 import { FormInput} from "@/styles/atom/form-input";
 
-const Input = ({ inputtype, name, id, placeholder, autocomplete, onBlur, errdisplay="none" }: InputProps) => {
+const Input = ({ inputtype, name, id, placeholder, autocomplete, onBlur, errdisplay }: InputProps) => {
 
   return (
     <FormInput 
@@ -11,7 +11,7 @@ const Input = ({ inputtype, name, id, placeholder, autocomplete, onBlur, errdisp
         placeholder={placeholder}
         autoComplete={autocomplete}
         onBlur={onBlur}
-        errdisplay={errdisplay}
+        $errdisplay={errdisplay}
       />
   );
 };

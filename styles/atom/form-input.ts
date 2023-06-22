@@ -3,7 +3,7 @@ import { colors } from "../base/variables";
 import { typography } from "../base/typography";
 
 export interface errInputProps {
-    errdisplay: string
+    $errdisplay?: string
 }
 
 export const FormInput = styled.input<errInputProps>`
@@ -14,9 +14,9 @@ export const FormInput = styled.input<errInputProps>`
     width: 100%;
     max-width: 23.5rem;
     ${typography.desc};
-    color: ${props => props.errdisplay === 'block' ? colors.tomato : colors["dark-navy"]};
-    background-color: ${props => props.errdisplay === 'block' ? 'rgba(255, 97, 85, 0.15)' : 'white'};
-    border-color: ${props => props.errdisplay === 'block' ? colors.tomato : colors["dark-navy"]};
+    color: ${(props: errInputProps) => props.$errdisplay === 'block' ? colors.tomato : colors["dark-navy"]};
+    background-color: ${(props: errInputProps) => props.$errdisplay === 'block' ? 'rgba(255, 97, 85, 0.15)' : 'white'};
+    border-color: ${(props: errInputProps) => props.$errdisplay === 'block' ? colors.tomato : colors["dark-navy"]};
 
     &:hover {
         cursor: pointer;
