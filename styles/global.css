@@ -23,13 +23,16 @@ body {
   font-family: 'Roboto', sans-serif;;
   font-size: 1rem;
   line-height: 1;
+  }
 
-  @media (min-width: 47.625rem) {
+@media (min-width: 47.625rem) {
+  body {
     display: grid;
     place-content: center;
     background-color: #36384D;
   }
 }
+
 h1,
 h2,
 h3,
