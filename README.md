@@ -45,10 +45,6 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
 - Mobile-first workflow
 - [Next.js](https://nextjs.org/) - React framework with Typescript
 - [Styled Components](https://styled-components.com/) - For styles
